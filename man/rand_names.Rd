@@ -4,7 +4,7 @@
 \alias{rand_names}
 \title{Random name generator}
 \usage{
-rand_names(n, seed = NULL, gender = NULL, nationality = NULL)
+rand_names(n = 1, seed = NULL, gender = NULL, nationality = NULL)
 }
 \arguments{
 \item{n}{Number of names required. It's a public unrestricted API so be a

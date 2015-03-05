@@ -30,13 +30,10 @@
 #'  # filter(user.gender == "female") %>%
 #'  #  select(user.name.first, user.name.last)
 rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL) {
-  x <- list()
   ee_compact <- function(l) Filter(Negate(is.null), l)
-  args <- ee_compact(as.list(c(seed = seed, gender = gender, nationality = nationality)))
+  args <- ee_compact(as.list(c(results = n, seed = seed, gender = gender, nationality = nationality)))
   if(n > 0) {
-    for(i in 1:n) {
-      x[i] <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
+      x <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
     }
-  }
   tbl_df(rbind_all(x))
 }
