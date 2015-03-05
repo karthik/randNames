@@ -11,7 +11,7 @@
 #' user.location.street,  user.picture.large.
 #'
 #' @param n Number of names required. Free users get 100 max (and 1000 per day).
-#'   Purchase an key here: https://randomapi.com/pricing
+#'   Purchase an key here: \url{https://randomapi.com/pricing}
 #' @param seed A random string to ensure same results
 #' @param gender male or female
 #' @param nationality Currently only takes \code{US} or \code{GB}

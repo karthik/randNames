@@ -9,7 +9,7 @@ rand_names(n = 1, seed = NULL, gender = NULL, nationality = NULL,
 }
 \arguments{
 \item{n}{Number of names required. Free users get 100 max (and 1000 per day).
-Purchase an key here: https://randomapi.com/pricing}
+Purchase an key here: \url{https://randomapi.com/pricing}}
 
 \item{seed}{A random string to ensure same results}
 

@@ -26,27 +26,27 @@ library(randNames)
 ```
 #> Source: local data frame [20 x 2]
 #> 
-#>        first      last
-#> 1      irene     wells
-#> 2        art     mccoy
-#> 3      kelly    brewer
-#> 4    clifton      reid
-#> 5      janet   barrett
-#> 6     claude    newman
-#> 7      diana    graham
-#> 8      brian     clark
-#> 9      allie      ford
-#> 10     nolan alexander
-#> 11    brooke    rogers
-#> 12 elizabeth   sanders
-#> 13    sharon    horton
-#> 14      todd     lewis
-#> 15   annette      ward
-#> 16      tara   shelton
-#> 17       ted   russell
-#> 18    jeremy    moreno
-#> 19       amy    thomas
-#> 20     kelly      pena
+#>      first      last
+#> 1      ben    nguyen
+#> 2    brett  lawrence
+#> 3  jessica   jackson
+#> 4   margie     dixon
+#> 5      ida      wade
+#> 6  candice     lopez
+#> 7     lily    snyder
+#> 8     gina fernandez
+#> 9  gregory    willis
+#> 10 charles    fowler
+#> 11    mike     myers
+#> 12  harold    rivera
+#> 13    rita   holland
+#> 14    krin    jensen
+#> 15  albert      hart
+#> 16   joyce   barnett
+#> 17 phyllis      hart
+#> 18   holly mitchelle
+#> 19   jesus patterson
+#> 20  milton      ward
 ```
 
 __Filter by nationality__
@@ -110,3 +110,34 @@ __Set seed__
 #> 4         eduardo        garrett
 #> 5            earl          garza
 ```
+
+__Additional fields beyond first and last name__
+
+
+seed
+user.password
+user.sha256
+user.cell
+user.name.title
+user.location.city
+user.picture.medium
+user.gender
+user.salt
+user.registered
+user.SSN
+user.name.first
+user.location.state
+user.picture.thumbnail
+user.email
+user.md5
+user.dob
+user.version
+user.name.last
+user.location.zip
+user.NINO
+user.username
+user.sha1
+user.phone
+user.nationality
+user.location.street
+user.picture.large.
