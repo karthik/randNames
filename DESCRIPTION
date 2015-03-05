@@ -6,8 +6,8 @@ Description: Package generates random names with additional information includin
 Depends: R (>= 3.1.2)
 License: CC0
 LazyData: true
-Imports:
+Imports: 
         dplyr,
         httr,
         jsonlite
-
+Suggests: testthat
