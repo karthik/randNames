@@ -4,11 +4,17 @@
 \alias{rand_names}
 \title{Random name generator}
 \usage{
-rand_names(n)
+rand_names(n, seed = NULL, gender = NULL, nationality = NULL)
 }
 \arguments{
 \item{n}{Number of names required. It's a public unrestricted API so be a
 good citizen and don't hammer it hard.}
+
+\item{seed}{A random string to ensure same results}
+
+\item{gender}{male or female}
+
+\item{nationality}{Currently only takes \code{US} or \code{GB}}
 }
 \description{
 This function grabs a list of random names from the random user generator
@@ -28,9 +34,9 @@ library(dplyr)
 rand_names \%>\%
 select(first = user.name.first, last = user.name.last)
 
- x <- 5 \%>\%
-   rand_names \%>\%
-  filter(user.gender == "female") \%>\%
-select(user.name.first, user.name.last)
+ # x <- 5 \%>\%
+ #   rand_names \%>\%
+ # filter(user.gender == "female") \%>\%
+ #  select(user.name.first, user.name.last)
 }
 

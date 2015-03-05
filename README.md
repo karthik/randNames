@@ -49,3 +49,64 @@ select(first = user.name.first, last = user.name.last)
 #> 20     kelly      pena
 ```
 
+__Filter by nationality__
+
+
+```r
+5 %>% 
+  rand_names(nationality = "GB") %>%  # Currently takes only US or GB. More coming.
+  select(user.name.first, user.name.last)
+```
+
+```
+#> Source: local data frame [5 x 2]
+#> 
+#>   user.name.first user.name.last
+#> 1            jane         pierce
+#> 2         vanessa         clarke
+#> 3          milton       mckinney
+#> 4           faith          grant
+#> 5           debra         watson
+```
+
+__Filter by gender__
+
+
+```r
+# Note this is currently broken on the API side
+5 %>% 
+  rand_names(gender = "female") %>% 
+  select(user.name.first, user.name.last)
+```
+
+```
+#> Source: local data frame [5 x 2]
+#> 
+#>   user.name.first user.name.last
+#> 1            nina         miller
+#> 2       katherine           ryan
+#> 3             kim           dunn
+#> 4          hannah          hicks
+#> 5           bobby          evans
+```
+
+
+__Set seed__
+
+
+```r
+5 %>% 
+  rand_names(seed = 'foobar') %>% 
+  select(user.name.first, user.name.last)
+```
+
+```
+#> Source: local data frame [5 x 2]
+#> 
+#>   user.name.first user.name.last
+#> 1            earl          garza
+#> 2         eduardo        garrett
+#> 3         eduardo        garrett
+#> 4         eduardo        garrett
+#> 5            earl          garza
+```

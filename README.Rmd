@@ -6,12 +6,13 @@
 ```{r, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
   comment = "#>",
+  cache = TRUE,
   error = FALSE,
   tidy = FALSE
 )
 ```
 
-Installation
+**Installation**
 
 ```{r, eval = FALSE}
 devtools::install_github("karthik/randNames")
@@ -27,3 +28,28 @@ rand_names %>%
 select(first = user.name.first, last = user.name.last)
 ```
 
+__Filter by nationality__
+
+```{r, nationality, cache = TRUE}
+5 %>% 
+  rand_names(nationality = "GB") %>%  # Currently takes only US or GB. More coming.
+  select(user.name.first, user.name.last)
+```
+
+__Filter by gender__
+
+```{r, gender}
+# Note this is currently broken on the API side
+5 %>% 
+  rand_names(gender = "female") %>% 
+  select(user.name.first, user.name.last)
+```
+
+
+__Set seed__
+
+```{r, seed}
+5 %>% 
+  rand_names(seed = 'foobar') %>% 
+  select(user.name.first, user.name.last)
+```

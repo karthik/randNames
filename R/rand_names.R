@@ -12,25 +12,30 @@
 #'
 #' @param n Number of names required. It's a public unrestricted API so be a
 #'   good citizen and don't hammer it hard.
+#' @param seed A random string to ensure same results
+#' @param gender male or female
+#' @param nationality Currently only takes \code{US} or \code{GB}
 #' @import httr
 #' @importFrom jsonlite fromJSON
 #' @importFrom dplyr tbl_df rbind_all
 #' @export
-#' @examples 
+#' @examples
 #' library(dplyr)
 #' 5 %>%
 #' rand_names %>%
 #' select(first = user.name.first, last = user.name.last)
 #'
-#'  x <- 5 %>%
-#'    rand_names %>%
-#'   filter(user.gender == "female") %>%
-#' select(user.name.first, user.name.last)
-rand_names <- function(n) {
+#'  # x <- 5 %>%
+#'  #   rand_names %>%
+#'  # filter(user.gender == "female") %>%
+#'  #  select(user.name.first, user.name.last)
+rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL) {
   x <- list()
+  ee_compact <- function(l) Filter(Negate(is.null), l)
+  args <- ee_compact(as.list(c(seed = seed, gender = gender, nationality = nationality)))
   if(n > 0) {
     for(i in 1:n) {
-      x[i] <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/"), as = "text"), flatten = TRUE)
+      x[i] <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
     }
   }
   tbl_df(rbind_all(x))
