@@ -2,3 +2,9 @@ language: r
 
 env:
   - WARNINGS_ARE_ERRORS=1
+
+install:
+  - ./travis-tool.sh github_package jimhester/covr
+
+after_success:
+  - Rscript -e 'library(covr);coveralls()'
