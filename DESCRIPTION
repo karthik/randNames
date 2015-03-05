@@ -1,13 +1,13 @@
 Package: randNames
 Title: Package provides access to fake user data
-Version: 0.1.0.9000
+Version: 0.2.0.9000
 Authors@R: 'Karthik Ram <karthik.ram@gmail.com> [aut, cre]'
 Description: Package generates random names with additional information including fake SSNs, gender, location, zip, age, address, and nationality (among other info)
 Depends: R (>= 3.1.2)
 License: CC0
 LazyData: true
 Imports:
-        httr,
         dplyr,
-        jsonlite,
+        httr,
+        jsonlite
 
