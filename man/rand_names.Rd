@@ -4,17 +4,20 @@
 \alias{rand_names}
 \title{Random name generator}
 \usage{
-rand_names(n = 1, seed = NULL, gender = NULL, nationality = NULL)
+rand_names(n = 1, seed = NULL, gender = NULL, nationality = NULL,
+  key = NULL)
 }
 \arguments{
-\item{n}{Number of names required. It's a public unrestricted API so be a
-good citizen and don't hammer it hard.}
+\item{n}{Number of names required. Free users get 100 max (and 1000 per day).
+Purchase an key here: https://randomapi.com/pricing}
 
 \item{seed}{A random string to ensure same results}
 
 \item{gender}{male or female}
 
 \item{nationality}{Currently only takes \code{US} or \code{GB}}
+
+\item{key}{An API key for more requests. Free plan can tap out after 1000 requests (100 max per request).}
 }
 \description{
 This function grabs a list of random names from the random user generator

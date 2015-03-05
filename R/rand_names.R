@@ -10,11 +10,12 @@
 #' user.NINO,  user.username, user.sha1, user.phone, user.nationality,
 #' user.location.street,  user.picture.large.
 #'
-#' @param n Number of names required. It's a public unrestricted API so be a
-#'   good citizen and don't hammer it hard.
+#' @param n Number of names required. Free users get 100 max (and 1000 per day).
+#'   Purchase an key here: https://randomapi.com/pricing
 #' @param seed A random string to ensure same results
 #' @param gender male or female
 #' @param nationality Currently only takes \code{US} or \code{GB}
+#' @param key An API key for more requests. Free plan can tap out after 1000 requests (100 max per request).
 #' @import httr
 #' @importFrom jsonlite fromJSON
 #' @importFrom dplyr tbl_df rbind_all
@@ -29,9 +30,9 @@
 #'  #   rand_names %>%
 #'  # filter(user.gender == "female") %>%
 #'  #  select(user.name.first, user.name.last)
-rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL) {
+rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL, key = NULL) {
   ee_compact <- function(l) Filter(Negate(is.null), l)
-  args <- ee_compact(as.list(c(results = n, seed = seed, gender = gender, nationality = nationality)))
+  args <- ee_compact(as.list(c(results = n, seed = seed, gender = gender, nationality = nationality, key = key)))
   if(n > 0) {
       x <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
     }
