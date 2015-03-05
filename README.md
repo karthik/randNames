@@ -19,34 +19,34 @@ It queries a random name API and returns a whole bunch of useful fields.
 library(dplyr)
 library(randNames)
 20 %>%
-rand_names %>%
-select(first = user.name.first, last = user.name.last)
+  rand_names %>%
+  select(first = user.name.first, last = user.name.last)
 ```
 
 ```
 #> Source: local data frame [20 x 2]
 #> 
-#>       first     last
-#> 1      ivan    terry
-#> 2    darren     byrd
-#> 3    mathew martinez
-#> 4    sophia williams
-#> 5      lucy  stanley
-#> 6      paul     pena
-#> 7   darrell    reyes
-#> 8    pamela    ellis
-#> 9    connie     dean
-#> 10   justin davidson
-#> 11    terra  daniels
-#> 12   austin   vargas
-#> 13 veronica     hall
-#> 14     paul   howell
-#> 15   lillie  barrett
-#> 16     jeff  barnett
-#> 17    david    banks
-#> 18  louella peterson
-#> 19   albert    banks
-#> 20    naomi  russell
+#>        first      last
+#> 1   benjamin     hayes
+#> 2    brayden rodriguez
+#> 3        bob    wright
+#> 4      hanna   sanchez
+#> 5   maddison   carlson
+#> 6  alexandra   frazier
+#> 7     manuel    pierce
+#> 8     andrea  morrison
+#> 9     dennis    barnes
+#> 10    steven      lowe
+#> 11      erin     grant
+#> 12     bobby       may
+#> 13 catherine      rice
+#> 14     frank  matthews
+#> 15 christian      cruz
+#> 16   susanna       kim
+#> 17    dustin    castro
+#> 18 katherine     gomez
+#> 19    sheryl    romero
+#> 20     eliza   steward
 ```
 
 __Filter by nationality__
@@ -54,7 +54,8 @@ __Filter by nationality__
 
 ```r
 5 %>% 
-  rand_names(nationality = "GB") %>%  # Currently takes only US or GB. More coming.
+# Currently takes only US or GB. More coming.
+  rand_names(nationality = "GB") %>%  
   select(user.name.first, user.name.last)
 ```
 
@@ -62,11 +63,11 @@ __Filter by nationality__
 #> Source: local data frame [5 x 2]
 #> 
 #>   user.name.first user.name.last
-#> 1            jane         pierce
-#> 2         vanessa         clarke
-#> 3          milton       mckinney
-#> 4           faith          grant
-#> 5           debra         watson
+#> 1          sophie      patterson
+#> 2         rosalyn          jones
+#> 3           mario           rose
+#> 4          connor           diaz
+#> 5           jakob        hawkins
 ```
 
 __Filter by gender__
@@ -83,11 +84,11 @@ __Filter by gender__
 #> Source: local data frame [5 x 2]
 #> 
 #>   user.name.first user.name.last
-#> 1            nina         miller
-#> 2       katherine           ryan
-#> 3             kim           dunn
-#> 4          hannah          hicks
-#> 5           bobby          evans
+#> 1        franklin        chapman
+#> 2         addison          mills
+#> 3             eva        coleman
+#> 4            jill         hansen
+#> 5            joel          owens
 ```
 
 
@@ -97,18 +98,18 @@ __Set seed__
 ```r
 5 %>% 
   rand_names(seed = 'foobar') %>% 
-  select(user.name.first, user.name.last)
+select(user.name.first, user.name.last)
 ```
 
 ```
 #> Source: local data frame [5 x 2]
 #> 
 #>   user.name.first user.name.last
-#> 1            earl          garza
-#> 2         eduardo        garrett
-#> 3         eduardo        garrett
-#> 4         eduardo        garrett
-#> 5            earl          garza
+#> 1         alberto         butler
+#> 2           peggy        johnson
+#> 3           kylie            cox
+#> 4            beth          allen
+#> 5         chester         garcia
 ```
 
 __Additional fields beyond first and last name__

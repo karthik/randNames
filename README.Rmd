@@ -24,15 +24,16 @@ It queries a random name API and returns a whole bunch of useful fields.
 library(dplyr)
 library(randNames)
 20 %>%
-rand_names %>%
-select(first = user.name.first, last = user.name.last)
+  rand_names %>%
+  select(first = user.name.first, last = user.name.last)
 ```
 
 __Filter by nationality__
 
 ```{r, nationality, cache = TRUE}
 5 %>% 
-  rand_names(nationality = "GB") %>%  # Currently takes only US or GB. More coming.
+# Currently takes only US or GB. More coming.
+  rand_names(nationality = "GB") %>%  
   select(user.name.first, user.name.last)
 ```
 
@@ -51,7 +52,7 @@ __Set seed__
 ```{r, seed}
 5 %>% 
   rand_names(seed = 'foobar') %>% 
-  select(user.name.first, user.name.last)
+select(user.name.first, user.name.last)
 ```
 
 __Additional fields beyond first and last name__
