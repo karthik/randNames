@@ -19,34 +19,34 @@ It queries a random name API and returns a whole bunch of useful fields.
 library(dplyr)
 library(randNames)
 20 %>%
-  rand_names %>%
-  select(first = user.name.first, last = user.name.last)
+rand_names %>%
+select(first = user.name.first, last = user.name.last)
 ```
 
 ```
 #> Source: local data frame [20 x 2]
 #> 
-#>      first      last
-#> 1      ben    nguyen
-#> 2    brett  lawrence
-#> 3  jessica   jackson
-#> 4   margie     dixon
-#> 5      ida      wade
-#> 6  candice     lopez
-#> 7     lily    snyder
-#> 8     gina fernandez
-#> 9  gregory    willis
-#> 10 charles    fowler
-#> 11    mike     myers
-#> 12  harold    rivera
-#> 13    rita   holland
-#> 14    krin    jensen
-#> 15  albert      hart
-#> 16   joyce   barnett
-#> 17 phyllis      hart
-#> 18   holly mitchelle
-#> 19   jesus patterson
-#> 20  milton      ward
+#>       first     last
+#> 1      ivan    terry
+#> 2    darren     byrd
+#> 3    mathew martinez
+#> 4    sophia williams
+#> 5      lucy  stanley
+#> 6      paul     pena
+#> 7   darrell    reyes
+#> 8    pamela    ellis
+#> 9    connie     dean
+#> 10   justin davidson
+#> 11    terra  daniels
+#> 12   austin   vargas
+#> 13 veronica     hall
+#> 14     paul   howell
+#> 15   lillie  barrett
+#> 16     jeff  barnett
+#> 17    david    banks
+#> 18  louella peterson
+#> 19   albert    banks
+#> 20    naomi  russell
 ```
 
 __Filter by nationality__
