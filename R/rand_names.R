@@ -15,7 +15,8 @@
 #' @import httr
 #' @importFrom jsonlite fromJSON
 #' @importFrom dplyr tbl_df rbind_all
-#' @examples \dontrun{
+#' @export
+#' @examples 
 #' library(dplyr)
 #' 5 %>%
 #' rand_names %>%
@@ -25,7 +26,6 @@
 #'    rand_names %>%
 #'   filter(user.gender == "female") %>%
 #' select(user.name.first, user.name.last)
-#' }
 rand_names <- function(n) {
   x <- list()
   if(n > 0) {

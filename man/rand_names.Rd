@@ -23,7 +23,6 @@ user.NINO,  user.username, user.sha1, user.phone, user.nationality,
 user.location.street,  user.picture.large.
 }
 \examples{
-\dontrun{
 library(dplyr)
 5 \%>\%
 rand_names \%>\%
@@ -33,6 +32,5 @@ select(first = user.name.first, last = user.name.last)
    rand_names \%>\%
   filter(user.gender == "female") \%>\%
 select(user.name.first, user.name.last)
-}
 }
 
