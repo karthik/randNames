@@ -1,0 +1,9 @@
+base
+devtools
+knitr
+rmarkdown
+httr
+jsonlite
+dplyr
+formatR
+randNames
