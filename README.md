@@ -19,8 +19,8 @@ It queries a random name API and returns a whole bunch of useful fields.
 library(dplyr)
 library(randNames)
 20 %>%
-rand_names %>%
-select(first = user.name.first, last = user.name.last)
+  rand_names %>%
+  select(first = user.name.first, last = user.name.last)
 ```
 
 ```
