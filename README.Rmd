@@ -1,0 +1,29 @@
+
+# Random names
+
+[![Travis-CI Build Status](https://travis-ci.org/karthik/randNames.png?branch=master)](https://travis-ci.org/karthik/randNames)
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  error = FALSE,
+  tidy = FALSE
+)
+```
+
+Installation
+
+```{r, eval = FALSE}
+devtools::install_github("karthik/randNames")
+```
+
+It queries a random name API and returns a whole bunch of useful fields. 
+
+```{r, names, cache = TRUE}
+library(dplyr)
+library(randNames)
+20 %>%
+rand_names %>%
+select(first = user.name.first, last = user.name.last)
+```
+
