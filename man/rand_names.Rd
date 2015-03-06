@@ -8,8 +8,8 @@ rand_names(n = 1, seed = NULL, gender = NULL, nationality = NULL,
   key = NULL)
 }
 \arguments{
-\item{n}{Number of names required. Free users get 100 max (and 1000 per day).
-Purchase an key here: \url{https://randomapi.com/pricing}}
+\item{n}{Number of names required. Free users get 100 max and registered RandomAPI users get 500 max.
+Register for a free API key here: \url{https://randomapi.com}}
 
 \item{seed}{A random string to ensure same results}
 
@@ -17,7 +17,7 @@ Purchase an key here: \url{https://randomapi.com/pricing}}
 
 \item{nationality}{Currently only takes \code{US} or \code{GB}}
 
-\item{key}{An API key for more requests. Free plan can tap out after 1000 requests (100 max per request).}
+\item{key}{An API key for more results per request (500 max for registered RandomAPI users).}
 }
 \description{
 This function grabs a list of random names from the random user generator
