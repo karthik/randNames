@@ -41,7 +41,6 @@ __Filter by nationality__
 __Filter by gender__
 
 ```{r, gender}
-# Note this is currently broken on the API side
 5 %>% 
   rand_names(gender = "female") %>% 
   select(user.name.first, user.name.last)

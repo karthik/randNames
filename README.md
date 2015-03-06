@@ -18,6 +18,22 @@ It queries a random name API and returns a whole bunch of useful fields.
 
 ```r
 library(dplyr)
+```
+
+```
+#> 
+#> Attaching package: 'dplyr'
+#> 
+#> The following object is masked from 'package:stats':
+#> 
+#>     filter
+#> 
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+```
+
+```r
 library(randNames)
 20 %>%
   rand_names %>%
@@ -27,27 +43,27 @@ library(randNames)
 ```
 #> Source: local data frame [20 x 2]
 #> 
-#>        first      last
-#> 1   benjamin     hayes
-#> 2    brayden rodriguez
-#> 3        bob    wright
-#> 4      hanna   sanchez
-#> 5   maddison   carlson
-#> 6  alexandra   frazier
-#> 7     manuel    pierce
-#> 8     andrea  morrison
-#> 9     dennis    barnes
-#> 10    steven      lowe
-#> 11      erin     grant
-#> 12     bobby       may
-#> 13 catherine      rice
-#> 14     frank  matthews
-#> 15 christian      cruz
-#> 16   susanna       kim
-#> 17    dustin    castro
-#> 18 katherine     gomez
-#> 19    sheryl    romero
-#> 20     eliza   steward
+#>       first     last
+#> 1    dwayne hamilton
+#> 2     angie  roberts
+#> 3       ray   fisher
+#> 4      cody      kim
+#> 5     louis     reed
+#> 6      luke   pierce
+#> 7      joey    meyer
+#> 8    victor  pearson
+#> 9      ross     lord
+#> 10  roberto    riley
+#> 11     earl    davis
+#> 12   andrea  barrett
+#> 13      don matthews
+#> 14     jose   jensen
+#> 15 salvador     dean
+#> 16    mario thompson
+#> 17 reginald     cook
+#> 18     phil   martin
+#> 19 caroline   wagner
+#> 20    logan   watson
 ```
 
 __Filter by nationality__
@@ -64,18 +80,17 @@ __Filter by nationality__
 #> Source: local data frame [5 x 2]
 #> 
 #>   user.name.first user.name.last
-#> 1          sophie      patterson
-#> 2         rosalyn          jones
-#> 3           mario           rose
-#> 4          connor           diaz
-#> 5           jakob        hawkins
+#> 1             roy          davis
+#> 2          sharon       mckinney
+#> 3          debbie         foster
+#> 4            judy      gutierrez
+#> 5          sharon          grant
 ```
 
 __Filter by gender__
 
 
 ```r
-# Note this is currently broken on the API side
 5 %>% 
   rand_names(gender = "female") %>% 
   select(user.name.first, user.name.last)
@@ -85,11 +100,11 @@ __Filter by gender__
 #> Source: local data frame [5 x 2]
 #> 
 #>   user.name.first user.name.last
-#> 1        franklin        chapman
-#> 2         addison          mills
-#> 3             eva        coleman
-#> 4            jill         hansen
-#> 5            joel          owens
+#> 1             mae            fox
+#> 2           kelly        herrera
+#> 3        serenity         turner
+#> 4           emily       franklin
+#> 5         katrina     montgomery
 ```
 
 
@@ -106,11 +121,11 @@ select(user.name.first, user.name.last)
 #> Source: local data frame [5 x 2]
 #> 
 #>   user.name.first user.name.last
-#> 1         alberto         butler
-#> 2           peggy        johnson
-#> 3           kylie            cox
-#> 4            beth          allen
-#> 5         chester         garcia
+#> 1            alex           byrd
+#> 2          jeremy        jimenez
+#> 3         micheal            cox
+#> 4            anna          allen
+#> 5     christopher         fuller
 ```
 
 __Additional fields beyond first and last name__
