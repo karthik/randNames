@@ -70,41 +70,61 @@ __Filter by nationality__
 
 
 ```r
-5 %>% 
+15 %>% 
 # Currently takes only US or GB. More coming.
   rand_names(nationality = "GB") %>%  
   select(user.name.first, user.name.last)
 ```
 
 ```
-#> Source: local data frame [5 x 2]
+#> Source: local data frame [15 x 2]
 #> 
-#>   user.name.first user.name.last
-#> 1             roy          davis
-#> 2          sharon       mckinney
-#> 3          debbie         foster
-#> 4            judy      gutierrez
-#> 5          sharon          grant
+#>    user.name.first user.name.last
+#> 1            diane      patterson
+#> 2             abby       anderson
+#> 3             ryan            cox
+#> 4           arthur          ortiz
+#> 5             ivan         newman
+#> 6             kate          stone
+#> 7         isabella        stewart
+#> 8            megan         harper
+#> 9         franklin         rhodes
+#> 10         douglas        barrett
+#> 11           cathy      henderson
+#> 12           julie       robinson
+#> 13         rebecca         turner
+#> 14           logan        watkins
+#> 15       christian       reynolds
 ```
 
 __Filter by gender__
 
 
 ```r
-5 %>% 
+15 %>% 
   rand_names(gender = "female") %>% 
   select(user.name.first, user.name.last)
 ```
 
 ```
-#> Source: local data frame [5 x 2]
+#> Source: local data frame [15 x 2]
 #> 
-#>   user.name.first user.name.last
-#> 1             mae            fox
-#> 2           kelly        herrera
-#> 3        serenity         turner
-#> 4           emily       franklin
-#> 5         katrina     montgomery
+#>    user.name.first user.name.last
+#> 1            eliza         watson
+#> 2            amber           ward
+#> 3              kim         duncan
+#> 4            abbie          stone
+#> 5            alice          mccoy
+#> 6           debbie        douglas
+#> 7            becky         gibson
+#> 8          britney            lee
+#> 9           judith       harrison
+#> 10             mia          davis
+#> 11        michelle       caldwell
+#> 12          lauren         nelson
+#> 13           tracy         lawson
+#> 14            lily         porter
+#> 15       alexandra        simmons
 ```
 
 
@@ -112,20 +132,30 @@ __Set seed__
 
 
 ```r
-5 %>% 
+15 %>% 
   rand_names(seed = 'foobar') %>% 
-select(user.name.first, user.name.last)
+  select(user.name.first, user.name.last)
 ```
 
 ```
-#> Source: local data frame [5 x 2]
+#> Source: local data frame [15 x 2]
 #> 
-#>   user.name.first user.name.last
-#> 1            alex           byrd
-#> 2          jeremy        jimenez
-#> 3         micheal            cox
-#> 4            anna          allen
-#> 5     christopher         fuller
+#>    user.name.first user.name.last
+#> 1           alfred           wade
+#> 2            joann         watson
+#> 3              ben         obrien
+#> 4             dale        steward
+#> 5           elaine         graves
+#> 6           jessie        gilbert
+#> 7             kyle           beck
+#> 8            diane        hawkins
+#> 9            allan         hansen
+#> 10          javier           hall
+#> 11          mattie          perry
+#> 12          rafael        hopkins
+#> 13           april        carlson
+#> 14         kathryn           ford
+#> 15          brandy       chambers
 ```
 
 __Additional fields beyond first and last name__

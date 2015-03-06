@@ -32,7 +32,7 @@ library(randNames)
 __Filter by nationality__
 
 ```{r, nationality, cache = TRUE}
-5 %>% 
+15 %>% 
 # Currently takes only US or GB. More coming.
   rand_names(nationality = "GB") %>%  
   select(user.name.first, user.name.last)
@@ -41,7 +41,7 @@ __Filter by nationality__
 __Filter by gender__
 
 ```{r, gender}
-5 %>% 
+15 %>% 
   rand_names(gender = "female") %>% 
   select(user.name.first, user.name.last)
 ```
@@ -50,9 +50,9 @@ __Filter by gender__
 __Set seed__
 
 ```{r, seed}
-5 %>% 
+15 %>% 
   rand_names(seed = 'foobar') %>% 
-select(user.name.first, user.name.last)
+  select(user.name.first, user.name.last)
 ```
 
 __Additional fields beyond first and last name__
