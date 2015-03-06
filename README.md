@@ -18,22 +18,6 @@ It queries a random name API and returns a whole bunch of useful fields.
 
 ```r
 library(dplyr)
-```
-
-```
-#> 
-#> Attaching package: 'dplyr'
-#> 
-#> The following object is masked from 'package:stats':
-#> 
-#>     filter
-#> 
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-```
-
-```r
 library(randNames)
 20 %>%
   rand_names %>%
@@ -43,27 +27,27 @@ library(randNames)
 ```
 #> Source: local data frame [20 x 2]
 #> 
-#>       first     last
-#> 1    dwayne hamilton
-#> 2     angie  roberts
-#> 3       ray   fisher
-#> 4      cody      kim
-#> 5     louis     reed
-#> 6      luke   pierce
-#> 7      joey    meyer
-#> 8    victor  pearson
-#> 9      ross     lord
-#> 10  roberto    riley
-#> 11     earl    davis
-#> 12   andrea  barrett
-#> 13      don matthews
-#> 14     jose   jensen
-#> 15 salvador     dean
-#> 16    mario thompson
-#> 17 reginald     cook
-#> 18     phil   martin
-#> 19 caroline   wagner
-#> 20    logan   watson
+#>       first      last
+#> 1    marsha    brewer
+#> 2      lynn   morales
+#> 3   kristen     scott
+#> 4     arron armstrong
+#> 5    shelly      holt
+#> 6   leonard fernandez
+#> 7  marshall      hart
+#> 8     isaac      diaz
+#> 9  beatrice   hopkins
+#> 10    mario  caldwell
+#> 11  beverly     mason
+#> 12   bobbie     mills
+#> 13      kim      bell
+#> 14  roberta    watson
+#> 15 kristina   coleman
+#> 16    pearl    powell
+#> 17    lewis   douglas
+#> 18  tiffany  harrison
+#> 19   violet     allen
+#> 20  lucille  stephens
 ```
 
 __Filter by nationality__
@@ -80,21 +64,21 @@ __Filter by nationality__
 #> Source: local data frame [15 x 2]
 #> 
 #>    user.name.first user.name.last
-#> 1            diane      patterson
-#> 2             abby       anderson
-#> 3             ryan            cox
-#> 4           arthur          ortiz
-#> 5             ivan         newman
-#> 6             kate          stone
-#> 7         isabella        stewart
-#> 8            megan         harper
-#> 9         franklin         rhodes
-#> 10         douglas        barrett
-#> 11           cathy      henderson
-#> 12           julie       robinson
-#> 13         rebecca         turner
-#> 14           logan        watkins
-#> 15       christian       reynolds
+#> 1            izzie        elliott
+#> 2             erik           dunn
+#> 3           amanda        daniels
+#> 4            caleb        sanchez
+#> 5            rosie        jenkins
+#> 6             luis           lane
+#> 7              sam        stevens
+#> 8          bernard         little
+#> 9          lillian           ross
+#> 10           molly       jennings
+#> 11            rick      gutierrez
+#> 12          brooke         carter
+#> 13         bradley           lord
+#> 14             jen        steward
+#> 15            john        daniels
 ```
 
 __Filter by gender__
@@ -110,21 +94,21 @@ __Filter by gender__
 #> Source: local data frame [15 x 2]
 #> 
 #>    user.name.first user.name.last
-#> 1            eliza         watson
-#> 2            amber           ward
-#> 3              kim         duncan
-#> 4            abbie          stone
-#> 5            alice          mccoy
-#> 6           debbie        douglas
-#> 7            becky         gibson
-#> 8          britney            lee
-#> 9           judith       harrison
-#> 10             mia          davis
-#> 11        michelle       caldwell
-#> 12          lauren         nelson
-#> 13           tracy         lawson
-#> 14            lily         porter
-#> 15       alexandra        simmons
+#> 1            jenny           ross
+#> 2            vicki           diaz
+#> 3            jenny       crawford
+#> 4          kaitlin      gutierrez
+#> 5              kim           wade
+#> 6           ashley           cruz
+#> 7           debbie           cole
+#> 8              sam         taylor
+#> 9            paige        nichols
+#> 10           sofia         bowman
+#> 11             zoe            cox
+#> 12           vicki        gregory
+#> 13            emma         larson
+#> 14          teresa         garcia
+#> 15          sophia         hunter
 ```
 
 
