@@ -1,4 +1,10 @@
 language: r
 
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'library(covr);coveralls()'
+
 env:
-  - WARNINGS_ARE_ERRORS=1
+  - warnings_are_errors: true
