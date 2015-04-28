@@ -2,6 +2,7 @@ language: r
 sudo: required
 r_github_packages:
   - jimhester/covr
+  - gaborcsardi/progress
 env:
 - warnings_are_errors: false
 after_success:
