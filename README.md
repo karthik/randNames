@@ -10,7 +10,7 @@
 
 
 ```r
-instal.packages("randNames")
+install.packages("randNames")
 ```
 
 or for the development version  

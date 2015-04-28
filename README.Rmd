@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 **Installation**
 
 ```{r, eval = FALSE}
-instal.packages("randNames")
+install.packages("randNames")
 ````
 
 or for the development version  
