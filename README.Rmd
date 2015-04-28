@@ -17,6 +17,11 @@ knitr::opts_chunk$set(
 **Installation**
 
 ```{r, eval = FALSE}
+instal.packages("randNames")
+````
+
+or for the development version  
+```{r, eval = FALSE}
 devtools::install_github("karthik/randNames")
 ```
 

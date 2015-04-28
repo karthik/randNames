@@ -10,6 +10,12 @@
 
 
 ```r
+instal.packages("randNames")
+```
+
+or for the development version  
+
+```r
 devtools::install_github("karthik/randNames")
 ```
 
