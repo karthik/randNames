@@ -1,0 +1,1 @@
+This is an initial release to CRAN. Tested against R-devel, Win builder and R 3.2.0 on OSX Yosemite.

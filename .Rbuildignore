@@ -2,3 +2,5 @@
 README.Rmd
 cache/
 .coveralls.yml
+NEWS.md
+cran-comments.md
