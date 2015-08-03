@@ -28,13 +28,13 @@
 #'
 #'  # x <- 5 %>%
 #'  #   rand_names %>%
-#'  # filter(user.gender == "female") %>%
-#'  #  select(user.name.first, user.name.last)
+#'  # dplyr::filter(user.gender == "female") %>%
+#'  #  dplyr::select(user.name.first, user.name.last)
 rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL, key = NULL) {
   ee_compact <- function(l) Filter(Negate(is.null), l)
   args <- ee_compact(as.list(c(results = n, seed = seed, gender = gender, nat = nationality, key = key)))
   if(n > 0) {
       x <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
     }
-  tbl_df(rbind_all(x))
+  tbl_df(x$results)
 }

@@ -39,7 +39,7 @@ select(first = user.name.first, last = user.name.last)
 
  # x <- 5 \%>\%
  #   rand_names \%>\%
- # filter(user.gender == "female") \%>\%
- #  select(user.name.first, user.name.last)
+ # dplyr::filter(user.gender == "female") \%>\%
+ #  dplyr::select(user.name.first, user.name.last)
 }
 
