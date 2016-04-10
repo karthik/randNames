@@ -18,7 +18,7 @@
 #' @param key An API key for more results per request (500 max for registered RandomAPI users).
 #' @import httr
 #' @importFrom jsonlite fromJSON
-#' @importFrom dplyr tbl_df rbind_all
+#' @importFrom tibble tbl_df 
 #' @export
 #' @examples
 #' data <- rand_names(5)

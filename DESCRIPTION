@@ -12,7 +12,7 @@ BugReports: https://github.com/karthik/randNames/issues
 License: MIT + file LICENSE
 LazyData: true
 Imports:
-	dplyr,
+	tibble,
     httr,
     jsonlite
 Suggests:
