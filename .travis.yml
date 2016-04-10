@@ -3,6 +3,7 @@ sudo: required
 r_github_packages:
   - jimhester/covr
   - gaborcsardi/progress
+  - hadley/dplyr
 env:
 - warnings_are_errors: false
 after_success:
