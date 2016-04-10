@@ -16,7 +16,6 @@ Imports:
     httr,
     jsonlite
 Suggests:
-
     gender,
     testthat
 RoxygenNote: 5.0.1
