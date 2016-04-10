@@ -21,7 +21,6 @@
 #' @importFrom dplyr tbl_df rbind_all
 #' @export
 #' @examples
-#' library(dplyr)
 #' 5 %>%
 #' rand_names %>%
 #' select(first = name.first, last = name.last)
