@@ -21,9 +21,8 @@
 #' @importFrom dplyr tbl_df rbind_all
 #' @export
 #' @examples
-#' 5 %>%
-#' rand_names %>%
-#' select(first = name.first, last = name.last)
+#' data <- rand_names(5)
+#' dplyr::select(data, first = name.first, last = name.last)
 #'
 #'  # x <- 5 %>%
 #'  #   rand_names %>%
