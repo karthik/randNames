@@ -12,10 +12,11 @@ BugReports: https://github.com/karthik/randNames/issues
 License: MIT + file LICENSE
 LazyData: true
 Imports:
+	dplyr,
     httr,
     jsonlite
 Suggests:
-	dplyr,
+
     gender,
     testthat
 RoxygenNote: 5.0.1
