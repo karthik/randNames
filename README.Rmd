@@ -32,7 +32,7 @@ library(dplyr)
 library(randNames)
 20 %>%
   rand_names %>%
-  select(first = user.name.first, last = user.name.last)
+  select(first = name.first, last = name.last)
 ```
 
 __Filter by nationality__
@@ -41,7 +41,7 @@ __Filter by nationality__
 15 %>% 
 # Currently takes only US or GB. More coming.
   rand_names(nationality = "GB") %>%  
-  select(user.name.first, user.name.last)
+  select(name.first, name.last)
 ```
 
 __Filter by gender__
@@ -49,7 +49,7 @@ __Filter by gender__
 ```{r, gender}
 15 %>% 
   rand_names(gender = "female") %>% 
-  select(user.name.first, user.name.last)
+  select(name.first, name.last)
 ```
 
 
@@ -58,36 +58,33 @@ __Set seed__
 ```{r, seed}
 15 %>% 
   rand_names(seed = 'foobar') %>% 
-  select(user.name.first, user.name.last)
+  select(name.first, name.last)
 ```
 
 __Additional fields beyond first and last name__
 
-
-seed  
-user.password  
-user.sha256  
-user.cell  
-user.name.title  
-user.location.city  
-user.picture.medium  
-user.gender  
-user.salt  
-user.registered  
-user.SSN  
-user.name.first  
-user.location.state  
-user.picture.thumbnail  
-user.email  
-user.md5  
-user.dob  
-user.version  
-user.name.last  
-user.location.zip  
-user.NINO  
-user.username  
-user.sha1  
-user.phone  
-user.nationality  
-user.location.street  
-user.picture.large  
+gender  
+email  
+registered"        
+dob  
+phone  
+cell  
+nat  
+name.title  
+name.first       
+name.last  
+location.street  
+location.city  
+location.state  
+location.postcode  
+login.username"    
+login.password  
+login.salt  
+login.md5  
+login.sha1  
+login.sha256  
+id.name  
+id.value  
+picture.large  
+picture.medium     
+picture.thumbnail  
