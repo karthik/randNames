@@ -22,7 +22,7 @@
 #' @export
 #' @examples
 #' data <- rand_names(5)
-#' dplyr::select(data, first = name.first, last = name.last)
+#' # dplyr::select(data, first = name.first, last = name.last)
 #'
 #'  # x <- 5 %>%
 #'  #   rand_names %>%
