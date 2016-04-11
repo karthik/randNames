@@ -32,14 +32,12 @@ user.NINO,  user.username, user.sha1, user.phone, user.nationality,
 user.location.street,  user.picture.large.
 }
 \examples{
-library(dplyr)
-5 \%>\%
-rand_names \%>\%
-select(first = user.name.first, last = user.name.last)
+data <- rand_names(5)
+# dplyr::select(data, first = name.first, last = name.last)
 
  # x <- 5 \%>\%
  #   rand_names \%>\%
- # dplyr::filter(user.gender == "female") \%>\%
- #  dplyr::select(user.name.first, user.name.last)
+ # dplyr::filter(gender == "female") \%>\%
+ #  dplyr::select(name.first, name.last)
 }
 

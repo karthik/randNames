@@ -2,6 +2,5 @@
 
 export(rand_names)
 import(httr)
-importFrom(dplyr,rbind_all)
-importFrom(dplyr,tbl_df)
 importFrom(jsonlite,fromJSON)
+importFrom(tibble,tbl_df)
