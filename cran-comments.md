@@ -2,7 +2,7 @@ CRAN maintainers write:
 
 Dear maintainer,
 
-We now see
+This now seems to fail with
 
 * checking examples ... ERROR
 Running examples in ‘randNames-Ex.R’ failed
@@ -30,29 +30,9 @@ The following objects are masked from ‘package:base’:
 > 5 %>%
 + rand_names %>%
 + select(first = user.name.first, last = user.name.last)
-Error: object at index 2 not a data.frame
+Error in eval(expr, envir, enclos) : object 'user.name.first' not found
+Calls: %>% ... select_vars_ -> <Anonymous> -> lapply -> FUN -> eval -> eval
 Execution halted
 
-* checking tests ... ERROR
-Running the tests in ‘tests/testthat.R’ failed.
-Last 13 lines of output:
-  14: tryCatchOne(expr, names, parentenv, handlers[[1L]])
-  15: doTryCatch(return(expr), name, parentenv, handler)
-  16: eval(assertion, env)
-  17: eval(expr, envir, enclos)
-  18: is.data.frame(data)
-  19: rbind_all(x)
 
-  testthat results =============================================================
-===
-  OK: 0 SKIPPED: 0 FAILED: 1
-  1. Error: Random names work
-
-  Error: testthat unit tests failed
-  Execution halted
-
-
-
-  These errors have been fixed in the current submission.
-
-  
+These errors have been fixed in this update.
