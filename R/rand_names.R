@@ -14,7 +14,7 @@
 #'   Register for a free API key here: \url{https://randomapi.com}
 #' @param seed A random string to ensure same results
 #' @param gender male or female
-#' @param nationality Currently only takes \code{US} or \code{GB}
+#' @param nationality Currently takes: \code{AU}, \code{BR}, \code{CA}, \code{CH}, \code{DE}, \code{DK}, \code{ES}, \code{FI}, \code{FR}, \code{GB}, \code{IE}, \code{IR}, \code{NL}, \code{NZ}, \code{TR}, \code{US}
 #' @param key An API key for more results per request (500 max for registered RandomAPI users).
 #' @import httr
 #' @importFrom jsonlite fromJSON

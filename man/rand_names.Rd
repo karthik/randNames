@@ -15,7 +15,7 @@ Register for a free API key here: \url{https://randomapi.com}}
 
 \item{gender}{male or female}
 
-\item{nationality}{Currently only takes \code{US} or \code{GB}}
+\item{nationality}{Currently takes: \code{AU}, \code{BR}, \code{CA}, \code{CH}, \code{DE}, \code{DK}, \code{ES}, \code{FI}, \code{FR}, \code{GB}, \code{IE}, \code{IR}, \code{NL}, \code{NZ}, \code{TR}, \code{US}}
 
 \item{key}{An API key for more results per request (500 max for registered RandomAPI users).}
 }
