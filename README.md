@@ -64,7 +64,8 @@ __Filter by nationality__
 
 ```r
 15 %>% 
-# Currently takes only US or GB. More coming.
+# Available nationalities: AU, BR, CA, CH, DE, DK, ES, FI, FR, GB, IE, IR, NL, NZ, TR, US
+# You can specify multiple nationalities. e.g. "gb, us"
   rand_names(nationality = "GB") %>%  
   select(name.first, name.last)
 ```
@@ -73,22 +74,22 @@ __Filter by nationality__
 #> Source: local data frame [15 x 2]
 #> 
 #>    name.first name.last
-#>         (chr)     (chr)
-#> 1     douglas   kennedy
-#> 2       julio fernandez
-#> 3       lance      diaz
-#> 4        erin   mendoza
-#> 5     melissa   perkins
-#> 6       mandy     adams
-#> 7     alfredo  thompson
-#> 8       becky mcdonalid
-#> 9       emily     craig
-#> 10     jerome     wells
-#> 11       gary    porter
-#> 12   isabella   sanders
-#> 13     tracey     dixon
-#> 14       raul    davies
-#> 15      linda    tucker
+#>         <chr>     <chr>
+#> 1       susan hernandez
+#> 2      hector   jenkins
+#> 3     caitlin    rhodes
+#> 4     gregory  jennings
+#> 5       vicki    fuller
+#> 6   christian    gibson
+#> 7       riley   holland
+#> 8      ronald      boyd
+#> 9         sam   jimenez
+#> 10       ivan armstrong
+#> 11       joey     grant
+#> 12      alice  lawrence
+#> 13     austin    davies
+#> 14   florence      ward
+#> 15      ruben     meyer
 ```
 
 __Filter by gender__

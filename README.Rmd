@@ -41,7 +41,8 @@ __Filter by nationality__
 
 ```{r, nationality, cache = TRUE}
 15 %>% 
-# Currently takes only US or GB. More coming.
+# Available nationalities: AU, BR, CA, CH, DE, DK, ES, FI, FR, GB, IE, IR, NL, NZ, TR, US
+# You can specify multiple nationalities. e.g. "gb, us"
   rand_names(nationality = "GB") %>%  
   select(name.first, name.last)
 ```
