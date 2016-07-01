@@ -30,7 +30,11 @@
 #'  #  dplyr::select(name.first, name.last)
 rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL, key = NULL) {
   ee_compact <- function(l) Filter(Negate(is.null), l)
-  args <- ee_compact(as.list(c(results = n, seed = seed, gender = gender, nat = nationality, key = key)))
+  args <- ee_compact(as.list(c(results = n,
+                               seed = seed,
+                               gender = gender,
+                               nat = nationality,
+                               key = key)))
   if(n > 0) {
       x <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
     }
