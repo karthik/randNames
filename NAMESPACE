@@ -3,4 +3,4 @@
 export(rand_names)
 import(httr)
 importFrom(jsonlite,fromJSON)
-importFrom(tibble,tbl_df)
+importFrom(tibble,as_data_frame)

@@ -18,7 +18,7 @@
 #' @param key An API key for more results per request (500 max for registered RandomAPI users).
 #' @import httr
 #' @importFrom jsonlite fromJSON
-#' @importFrom tibble tbl_df 
+#' @importFrom tibble  as_data_frame
 #' @export
 #' @examples
 #' data <- rand_names(5)
@@ -34,5 +34,5 @@ rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL, ke
   if(n > 0) {
       x <- jsonlite::fromJSON(httr::content(httr::GET("http://api.randomuser.me/", query = args), as = "text"), flatten = TRUE)
     }
-  tbl_df(x$results)
+   as_data_frame(x$results)
 }
