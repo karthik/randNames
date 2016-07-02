@@ -1,9 +1,7 @@
 
 # Random names
 
-[![Travis-CI Build Status](https://travis-ci.org/karthik/randNames.png?branch=master)](https://travis-ci.org/karthik/randNames)  
-[![Coverage Status](https://coveralls.io/repos/karthik/randNames/badge.svg)](https://coveralls.io/r/karthik/randNames)  
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randNames)](https://cran.r-project.org/package=randNames)
+[![Travis-CI Build Status](https://travis-ci.org/karthik/randNames.png?branch=master)](https://travis-ci.org/karthik/randNames)   [![Coverage Status](https://coveralls.io/repos/karthik/randNames/badge.svg)](https://coveralls.io/r/karthik/randNames)   [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randNames)](https://cran.r-project.org/package=randNames)  [![](http://cranlogs.r-pkg.org/badges/randNames)](http://cran.rstudio.com/web/packages/randNames/index.html)
 
 The package provides a programmatic interface to the Random Names API and returns 'sample' user data including fake first/last names, emails, SSNs, addresses, avatars and more. Search queries can be further filtered by gender and nationality.
 
@@ -66,7 +64,7 @@ __Filter by nationality__
 ```r
 15 %>% 
 # Available nationalities: AU, BR, CA, CH, DE, DK, ES, FI, FR, GB, IE, IR, NL, NZ, TR, US
-# You can specify multiple nationalities. e.g. "gb, us"
+# You can specify multiple nationalities. e.g. "gb,us"
   rand_names(nationality = "GB") %>%  
   select(name.first, name.last)
 ```
@@ -76,21 +74,21 @@ __Filter by nationality__
 #> 
 #>    name.first name.last
 #>         <chr>     <chr>
-#> 1       susan hernandez
-#> 2      hector   jenkins
-#> 3     caitlin    rhodes
-#> 4     gregory  jennings
-#> 5       vicki    fuller
-#> 6   christian    gibson
-#> 7       riley   holland
-#> 8      ronald      boyd
-#> 9         sam   jimenez
-#> 10       ivan armstrong
-#> 11       joey     grant
-#> 12      alice  lawrence
-#> 13     austin    davies
-#> 14   florence      ward
-#> 15      ruben     meyer
+#> 1       emily    brooks
+#> 2     lillian   stanley
+#> 3      gerald henderson
+#> 4      alison   gilbert
+#> 5       henry   simpson
+#> 6      albert robertson
+#> 7       nolan  reynolds
+#> 8       sarah    palmer
+#> 9       molly rodriquez
+#> 10      peter   walters
+#> 11   benjamin    larson
+#> 12     sheryl     payne
+#> 13      eliza       kim
+#> 14       kent mitchelle
+#> 15     tyrone    holmes
 ```
 
 __Filter by gender__
@@ -106,23 +104,23 @@ library(randNames)
 ```
 #> Source: local data frame [15 x 2]
 #> 
-#>    name.first   name.last
-#>         <chr>       <chr>
-#> 1      neline   koebrugge
-#> 2    kimberly    marshall
-#> 3        هلیا سلطانی نژاد
-#> 4        zaza    van vark
-#> 5     heloísa       moura
-#> 6      andrea       white
-#> 7     maëline        joly
-#> 8     claudia    santiago
-#> 9     matilda       lampo
-#> 10       ruby       jones
-#> 11      nanna     thomsen
-#> 12    abigail        wood
-#> 13     lucile        roux
-#> 14       بیتا       حیدری
-#> 15      paige      walker
+#>    name.first       name.last
+#>         <chr>           <chr>
+#> 1     abigail           price
+#> 2       sofia         ylitalo
+#> 3      marika           dobbe
+#> 4        ella        andersen
+#> 5    fransien van plateringen
+#> 6      séléna          dubois
+#> 7       tansu          potman
+#> 8       megan        bouchard
+#> 9       lotta          kallio
+#> 10       lily        williams
+#> 11      anaïs         leclerc
+#> 12       iida           kokko
+#> 13      laura       rodriguez
+#> 14        غزل           پارسا
+#> 15       emma         douglas
 ```
 
 

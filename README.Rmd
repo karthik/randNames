@@ -1,9 +1,7 @@
 
 # Random names
 
-[![Travis-CI Build Status](https://travis-ci.org/karthik/randNames.png?branch=master)](https://travis-ci.org/karthik/randNames)  
-[![Coverage Status](https://coveralls.io/repos/karthik/randNames/badge.svg)](https://coveralls.io/r/karthik/randNames)  
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randNames)](https://cran.r-project.org/package=randNames)
+[![Travis-CI Build Status](https://travis-ci.org/karthik/randNames.png?branch=master)](https://travis-ci.org/karthik/randNames)   [![Coverage Status](https://coveralls.io/repos/karthik/randNames/badge.svg)](https://coveralls.io/r/karthik/randNames)   [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randNames)](https://cran.r-project.org/package=randNames)  [![](http://cranlogs.r-pkg.org/badges/randNames)](http://cran.rstudio.com/web/packages/randNames/index.html)
 
 The package provides a programmatic interface to the Random Names API and returns 'sample' user data including fake first/last names, emails, SSNs, addresses, avatars and more. Search queries can be further filtered by gender and nationality.
 
@@ -43,7 +41,7 @@ __Filter by nationality__
 ```{r, nationality, cache = TRUE}
 15 %>% 
 # Available nationalities: AU, BR, CA, CH, DE, DK, ES, FI, FR, GB, IE, IR, NL, NZ, TR, US
-# You can specify multiple nationalities. e.g. "gb, us"
+# You can specify multiple nationalities. e.g. "gb,us"
   rand_names(nationality = "GB") %>%  
   select(name.first, name.last)
 ```
