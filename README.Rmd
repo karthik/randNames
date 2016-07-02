@@ -9,7 +9,7 @@
 ```{r, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
   comment = "#>",
-  cache = TRUE,
+  cache = FALSE,
   error = FALSE,
   message = FALSE,
   tidy = FALSE 
@@ -50,6 +50,7 @@ __Filter by nationality__
 __Filter by gender__
 
 ```{r, gender}
+library(randNames)
 15 %>% 
   rand_names(gender = "female") %>% 
   select(name.first, name.last)

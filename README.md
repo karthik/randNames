@@ -96,6 +96,7 @@ __Filter by gender__
 
 
 ```r
+library(randNames)
 15 %>% 
   rand_names(gender = "female") %>% 
   select(name.first, name.last)
@@ -104,23 +105,23 @@ __Filter by gender__
 ```
 #> Source: local data frame [15 x 2]
 #> 
-#>    name.first    name.last
-#>         (chr)        (chr)
-#> 1     abigail        sirko
-#> 2   annemarie         kern
-#> 3     kristin      gerlach
-#> 4      claire      legrand
-#> 5      alicia      olivier
-#> 6      shayna van de burgt
-#> 7  clémentine     gauthier
-#> 8        آوین      نكو نظر
-#> 9        آوین         کوتی
-#> 10     minttu        salmi
-#> 11     مرسانا      محمدخان
-#> 12    candice      holland
-#> 13       anni        saksa
-#> 14      tessa     gaillard
-#> 15         la    de kruijf
+#>    name.first     name.last
+#>         <chr>         <chr>
+#> 1        ayla         green
+#> 2       tessa         roger
+#> 3    annabell          graf
+#> 4       diena van der toorn
+#> 5        lila       sanchez
+#> 6      solène       clement
+#> 7        maia         smith
+#> 8        lisa        winter
+#> 9       clara       marquez
+#> 10   scarlett         lucas
+#> 11    rebecca       douglas
+#> 12      ellen          reid
+#> 13     kerttu      heikkila
+#> 14    maïwenn      marchand
+#> 15      elise         morin
 ```
 
 
@@ -137,7 +138,7 @@ __Set seed__
 #> Source: local data frame [15 x 2]
 #> 
 #>    name.first  name.last
-#>         (chr)      (chr)
+#>         <chr>      <chr>
 #> 1       becky       sims
 #> 2      amelia   anderson
 #> 3       vilho   lampinen
