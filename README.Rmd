@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/karthik/randNames/badge.svg)](https://coveralls.io/r/karthik/randNames)  
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randNames)](https://cran.r-project.org/package=randNames)
 
+The package provides a programmatic interface to the Random Names API and returns 'sample' user data including fake first/last names, emails, SSNs, addresses, avatars and more. Search queries can be further filtered by gender and nationality.
 
 ```{r, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
@@ -67,6 +68,8 @@ __Set seed__
 
 __Additional fields beyond first and last name__
 
+
+```
 gender  
 email  
 registered"        
@@ -91,4 +94,5 @@ id.name
 id.value  
 picture.large  
 picture.medium     
-picture.thumbnail  
+picture.thumbnail 
+```

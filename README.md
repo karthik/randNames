@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/karthik/randNames/badge.svg)](https://coveralls.io/r/karthik/randNames)  
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randNames)](https://cran.r-project.org/package=randNames)
 
+The package provides a programmatic interface to the Random Names API and returns 'sample' user data including fake first/last names, emails, SSNs, addresses, avatars and more. Search queries can be further filtered by gender and nationality.
 
 
 
@@ -105,23 +106,23 @@ library(randNames)
 ```
 #> Source: local data frame [15 x 2]
 #> 
-#>    name.first     name.last
-#>         <chr>         <chr>
-#> 1        ayla         green
-#> 2       tessa         roger
-#> 3    annabell          graf
-#> 4       diena van der toorn
-#> 5        lila       sanchez
-#> 6      solène       clement
-#> 7        maia         smith
-#> 8        lisa        winter
-#> 9       clara       marquez
-#> 10   scarlett         lucas
-#> 11    rebecca       douglas
-#> 12      ellen          reid
-#> 13     kerttu      heikkila
-#> 14    maïwenn      marchand
-#> 15      elise         morin
+#>    name.first   name.last
+#>         <chr>       <chr>
+#> 1      neline   koebrugge
+#> 2    kimberly    marshall
+#> 3        هلیا سلطانی نژاد
+#> 4        zaza    van vark
+#> 5     heloísa       moura
+#> 6      andrea       white
+#> 7     maëline        joly
+#> 8     claudia    santiago
+#> 9     matilda       lampo
+#> 10       ruby       jones
+#> 11      nanna     thomsen
+#> 12    abigail        wood
+#> 13     lucile        roux
+#> 14       بیتا       حیدری
+#> 15      paige      walker
 ```
 
 
@@ -158,6 +159,8 @@ __Set seed__
 
 __Additional fields beyond first and last name__
 
+
+```
 gender  
 email  
 registered"        
@@ -182,4 +185,5 @@ id.name
 id.value  
 picture.large  
 picture.medium     
-picture.thumbnail  
+picture.thumbnail 
+```
