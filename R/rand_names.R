@@ -36,8 +36,13 @@ rand_names <- function(n = 1, seed = NULL, gender = NULL, nationality = NULL, ke
                                nat = nationality,
                                key = key)))
   if(n > 0) {
-      httr::stop_for_status(r)
-      x <- jsonlite::fromJSON(httr::content(r, as = "text"), flatten = TRUE)
-    }
-    tibble::as_data_frame(x$results)
+    # Make api call
+    r <- httr::GET("http://api.randomuser.me/", 
+                   query = args)
+    # Check if it raised an error
+    httr::stop_for_status(r)
+    # Interpret it
+    x <- jsonlite::fromJSON(httr::content(r, as = "text"), flatten = TRUE)
+  }
+  tibble::as_data_frame(x$results)
 }
